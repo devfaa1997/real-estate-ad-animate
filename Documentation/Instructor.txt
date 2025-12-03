@@ -1,0 +1,58 @@
+For example, with file 160x600.
+ 
+Open file: [file_name]160x600.html
+
+find the line:
+<script src="https://code.createjs.com/createjs-2015.11.26.min.js"></script>
+
+Replace with: 
+----------------------------------
+<script src="https://s0.2mdn.net/ads/studio/cached_libs/createjs_2015.11.26_54e1c3722102182bb133912ad4442e19_min.js"></script>
+----------------------------------
+
+add tag
+----------------------------------
+<meta name="ad.size" content="width=160,height=600">
+----------------------------------
+
+below the medium line.
+Attention: " with=160, height=6000 "  the size of the banner.
+
+
+On the line: <script src="[file_name]160x600.js?1508473977441"></script>  
+
+delete after  ?xxxxxxxx .js
+
+<script src="[file_name]160x600.js?1508473977441"></script>  => <script src="[file_name]160x600.js"></script>
+
+
+Add on line </ script>
+
+----------------------------------
+function getParameterByName(name) {
+    name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+    var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+        results = regex.exec(location.search);
+    return results == null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+  }
+
+function getClickUrl(name) {
+    return getParameterByName('agclick_'+name) || getParameterByName(name);
+}
+var clickTag = getClickUrl('clickTAG') || getClickUrl('clickTag') || getClickUrl('clicktag');
+----------------------------------
+
+
+Save and add to your GDN.
+
+Do the same with other size banners.
+
+
+Thank you for fixing my banner.
+Contact email support: stungmt@gmail.com
+
+Watch video tutorials:
+http://5fla.com/add-the-gdn-ad-code-into-the-file-html/
+http://5fla.com/guide-to-editing-banners-logo-and-text-in-animate-cc/
+
+
